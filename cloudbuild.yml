@@ -5,4 +5,4 @@ steps:
   args: ['push', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage']
 - name: 'ubuntu'
   args: ['sleep', '600']
-timeout: 1800s
+timeout: 3600s
