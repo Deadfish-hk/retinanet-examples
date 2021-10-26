@@ -3,7 +3,6 @@ steps:
   args: ['build', '-t', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage']
-images: ['gcr.io/my-docker-repo/myimage']
 - name: 'ubuntu'
   args: ['sleep', '600']
 timeout: 1800s
