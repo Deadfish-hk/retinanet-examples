@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo2/myimage2', '.']
+  args: ['build', '-t', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo3/myimage3', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo2/myimage2']
+  args: ['push', 'asia-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo3/myimage3']
 timeout: 3600s
