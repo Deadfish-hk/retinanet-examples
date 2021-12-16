@@ -19,7 +19,7 @@ class Model(nn.Module):
         self, 
         backbones='ResNet50FPN', 
         classes=80, 
-        ratios=[1.0, 5.0, 0.2], 
+        ratios=[1.0, 4.0, 8.0, 0.25, 0.125], 
         scales=[4 * 2 ** (i / 3) for i in range(3)],
         angles=None, 
         rotated_bbox=False, 
@@ -42,7 +42,7 @@ class Model(nn.Module):
         self.ratios = ratios
         self.scales = scales
         self.angles = angles if angles is not None else \
-                    [-np.pi / 2, 0, np.pi / 2] if self.rotated_bbox else None
+                    [-np.pi / 4, -np.pi / 2, 0, np.pi / 2, np.pi / 4] if self.rotated_bbox else None
         self.anchors = {}
         self.classes = classes
 
